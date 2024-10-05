@@ -1,0 +1,10 @@
+
+<input  placeholder="Search by name..."
+(input)="onInput($event)"
+(keydown.enter)="onSearchEnter()" />
+
+
+<p-listbox [options]="filteredResults" optionLabel="name">
+</p-listbox>
+
+

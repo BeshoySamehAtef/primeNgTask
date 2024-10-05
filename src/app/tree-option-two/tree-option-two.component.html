@@ -1,0 +1,21 @@
+<p-treeTable [value]="employees" [columns]="cols" selectionMode="single">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Employee Name</th>
+        <th>Employee ID</th>
+        <th>Manager ID</th>
+      </tr>
+    </ng-template>
+  
+    <ng-template pTemplate="body" let-node let-rowData="rowData">
+      <tr>
+        <td>
+          <p-treeTableToggler [rowNode]="node"></p-treeTableToggler>
+          {{ rowData?.Name }} 
+        </td>
+        <td>{{ rowData?.ID }}</td>
+        <td>{{ rowData?.Manager }}</td>
+      </tr>
+    </ng-template>
+  </p-treeTable>
+  
